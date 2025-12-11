@@ -25,4 +25,15 @@ app.use(express.static("public"))
 // server se cookie acces karna and store karna remove karna server se hi
 app.use(cookieParser())
 
+
+// routes 
+import userRouter from "./routes/user.route.js"
+
+// routes decalration
+app.use("/api/v1/users", userRouter)
+
+// https://localhost:8000/api/v1/users/register
+
+
+
 export {app}
